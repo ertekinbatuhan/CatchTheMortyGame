@@ -1,24 +1,345 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J3h-By-Pcg">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatchTheMorty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to catch morty" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3t-bM-w4F">
+                                <rect key="frame" x="16" y="59" width="377" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <color key="highlightedColor" name="AccentColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty4" translatesAutoresizingMaskIntoConstraints="NO" id="crY-s6-S4x">
+                                <rect key="frame" x="80" y="123" width="233" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mm-bA-PJq">
+                                <rect key="frame" x="122" y="291" width="148" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="rectangle.portrait.and.arrow.right.fill" catalog="system" title="Easy"/>
+                                <connections>
+                                    <segue destination="c5C-lk-exA" kind="show" id="hnX-xI-iNc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-8D-qaX">
+                                <rect key="frame" x="122" y="448" width="148" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="rectangle.portrait.and.arrow.forward.fill" catalog="system" title="Normal"/>
+                                <connections>
+                                    <segue destination="Jmv-as-QRn" kind="show" id="nDJ-8j-ula"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZY-ex-dcJ">
+                                <rect key="frame" x="122" y="623" width="148" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="rectangle.portrait.and.arrow.forward.fill" catalog="system" title="Hard"/>
+                                <connections>
+                                    <segue destination="r8z-ed-9MG" kind="show" id="sR9-Ul-rlD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OZb-sU-lCU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="649.61832061068696" y="-27.464788732394368"/>
+        </scene>
+        <!--First Controller-->
+        <scene sceneID="5SB-fu-Pv7">
+            <objects>
+                <viewController id="c5C-lk-exA" customClass="FirstController" customModule="CatchTheMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xPk-co-Soh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g7-a3-FOH">
+                                <rect key="frame" x="145" y="48" width="102" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sK1-fK-6wf">
+                                <rect key="frame" x="164" y="682" width="94" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="FL0-CG-th3">
+                                <rect key="frame" x="0.0" y="305" width="133" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="AjF-bB-oHH">
+                                <rect key="frame" x="268" y="305" width="122" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="cmZ-dL-2u6">
+                                <rect key="frame" x="0.0" y="466" width="133" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="WPZ-az-bG5">
+                                <rect key="frame" x="133" y="466" width="133" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mnt-0f-mfJ">
+                                <rect key="frame" x="268" y="466" width="122" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="bD5-hG-P3Q">
+                                <rect key="frame" x="131" y="146" width="127" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="yzl-RF-JOu">
+                                <rect key="frame" x="271" y="146" width="106" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="HEi-Aj-Sq5">
+                                <rect key="frame" x="7" y="146" width="118" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="U66-Wm-wmD">
+                                <rect key="frame" x="127" y="305" width="139" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ARh-ks-eS7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="s5o-kD-XlD"/>
+                    <connections>
+                        <outlet property="morty1" destination="HEi-Aj-Sq5" id="ktk-az-nld"/>
+                        <outlet property="morty2" destination="bD5-hG-P3Q" id="lTb-9U-1Ph"/>
+                        <outlet property="morty3" destination="yzl-RF-JOu" id="2cm-5g-C8v"/>
+                        <outlet property="morty4" destination="FL0-CG-th3" id="CRi-XN-cbM"/>
+                        <outlet property="morty5" destination="U66-Wm-wmD" id="ghL-gz-Qi6"/>
+                        <outlet property="morty6" destination="AjF-bB-oHH" id="gOd-gJ-FWv"/>
+                        <outlet property="morty7" destination="cmZ-dL-2u6" id="Wsk-z6-nwo"/>
+                        <outlet property="morty8" destination="WPZ-az-bG5" id="osq-uB-zcD"/>
+                        <outlet property="morty9" destination="Mnt-0f-mfJ" id="b1b-kJ-OAi"/>
+                        <outlet property="scoreLabel" destination="sK1-fK-6wf" id="9t4-sn-5Yl"/>
+                        <outlet property="timeLabel" destination="5g7-a3-FOH" id="vkU-7M-afW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAK-ko-5Zi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530.534351145038" y="-27.464788732394368"/>
+        </scene>
+        <!--Second Controller-->
+        <scene sceneID="YX8-r1-zn9">
+            <objects>
+                <viewController id="Jmv-as-QRn" customClass="SecondController" customModule="CatchTheMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5bQ-KE-OXa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fl-pp-uCD">
+                                <rect key="frame" x="151" y="54" width="102" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vW6-ll-xaC">
+                                <rect key="frame" x="164" y="676" width="105" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="zS5-PY-WOc">
+                                <rect key="frame" x="5" y="312" width="123" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="YRn-zK-0SU">
+                                <rect key="frame" x="130" y="312" width="139" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="yM2-fo-h0y">
+                                <rect key="frame" x="271" y="312" width="120" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="8JK-mZ-I1i">
+                                <rect key="frame" x="3" y="466" width="133" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="orG-ab-mtw">
+                                <rect key="frame" x="136" y="466" width="133" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="pS1-eq-Fqs">
+                                <rect key="frame" x="271" y="466" width="122" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="ypw-27-nbQ">
+                                <rect key="frame" x="134" y="146" width="129" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="yl8-oy-N0G">
+                                <rect key="frame" x="271" y="146" width="120" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="2jZ-Zk-3va">
+                                <rect key="frame" x="10" y="146" width="118" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZvI-x8-bSq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dLY-Y2-cbg"/>
+                    <connections>
+                        <outlet property="morty1" destination="2jZ-Zk-3va" id="sDn-l3-qoH"/>
+                        <outlet property="morty2" destination="ypw-27-nbQ" id="sD8-x9-ZWG"/>
+                        <outlet property="morty3" destination="yl8-oy-N0G" id="rCc-OM-DN3"/>
+                        <outlet property="morty4" destination="zS5-PY-WOc" id="0Re-oT-TYa"/>
+                        <outlet property="morty5" destination="YRn-zK-0SU" id="qAa-lV-Ezk"/>
+                        <outlet property="morty6" destination="yM2-fo-h0y" id="AoY-Cm-nBX"/>
+                        <outlet property="morty7" destination="8JK-mZ-I1i" id="hzq-do-g4C"/>
+                        <outlet property="morty8" destination="orG-ab-mtw" id="zsn-yR-44W"/>
+                        <outlet property="morty9" destination="pS1-eq-Fqs" id="uJ6-um-Ccp"/>
+                        <outlet property="scoreLabel" destination="vW6-ll-xaC" id="j59-Wc-7tr"/>
+                        <outlet property="timeLabel" destination="3Fl-pp-uCD" id="Ohf-xh-qlh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YyF-09-YKz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2304.5801526717555" y="-27.464788732394368"/>
+        </scene>
+        <!--Third Controller-->
+        <scene sceneID="xeb-sE-okf">
+            <objects>
+                <viewController id="r8z-ed-9MG" customClass="ThirdController" customModule="CatchTheMorty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j3W-K8-0Y2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1T0-un-NH3">
+                                <rect key="frame" x="149" y="45" width="102" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alI-xr-sFp">
+                                <rect key="frame" x="162" y="667" width="105" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="jHZ-ZA-NX4">
+                                <rect key="frame" x="3" y="303" width="123" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qdc-nc-Jwg">
+                                <rect key="frame" x="128" y="303" width="139" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wcg-Ec-XYF">
+                                <rect key="frame" x="269" y="303" width="120" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="7bO-9I-O6U">
+                                <rect key="frame" x="1" y="457" width="133" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="SjH-nl-YtU">
+                                <rect key="frame" x="134" y="457" width="133" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Ma-3G-PBR">
+                                <rect key="frame" x="269" y="457" width="122" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="6af-GI-may">
+                                <rect key="frame" x="132" y="137" width="129" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="TNp-93-7Rn">
+                                <rect key="frame" x="269" y="137" width="120" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morty.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZW4-cI-NS8">
+                                <rect key="frame" x="8" y="137" width="118" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CY2-4U-GoO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BwZ-yw-hkh"/>
+                    <connections>
+                        <outlet property="morty1" destination="ZW4-cI-NS8" id="r4a-RP-GM1"/>
+                        <outlet property="morty2" destination="6af-GI-may" id="T91-gc-v3S"/>
+                        <outlet property="morty3" destination="TNp-93-7Rn" id="7lO-EF-z0K"/>
+                        <outlet property="morty4" destination="jHZ-ZA-NX4" id="mBg-q5-Rqd"/>
+                        <outlet property="morty5" destination="Qdc-nc-Jwg" id="MYS-Yl-JAa"/>
+                        <outlet property="morty6" destination="Wcg-Ec-XYF" id="RdN-Vf-4rs"/>
+                        <outlet property="morty7" destination="7bO-9I-O6U" id="0rE-sW-RqZ"/>
+                        <outlet property="morty8" destination="SjH-nl-YtU" id="TTG-dM-kj7"/>
+                        <outlet property="morty9" destination="9Ma-3G-PBR" id="mJa-by-1Od"/>
+                        <outlet property="scoreLabel" destination="alI-xr-sFp" id="ArO-zd-xGL"/>
+                        <outlet property="timelabel" destination="1T0-un-NH3" id="URh-69-p4m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xME-QC-g4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3058.7786259541986" y="-16.197183098591552"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z27-oS-txm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J3h-By-Pcg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Akc-35-GUS">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mWg-cd-sWh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKc-RN-4Ia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277.09923664122135" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="morty.png" width="820" height="915"/>
+        <image name="morty4" width="860" height="361"/>
+        <image name="rectangle.portrait.and.arrow.forward.fill" catalog="system" width="128" height="108"/>
+        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
